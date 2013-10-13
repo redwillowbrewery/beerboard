@@ -1,0 +1,30 @@
+<h1>Change Beer Console</h1>
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Line Name</th>
+      <th>Beer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lines.each do |line| %>
+      <tr>
+        <td><%= line.number %></td>
+        <td><%= line.name %></td>
+        <td><%= line.currentBeer.name %></td>
+        <td><%= link_to 'Beer Change', edit_line_path(line) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

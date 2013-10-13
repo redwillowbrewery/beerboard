@@ -1,0 +1,134 @@
+<br>
+<table class="paddedTable">
+<tr>
+
+</tr>
+</table>
+<table class="floatedTable">
+	<tr>
+		<th>Line</th>
+		<th>Beer</th>
+		<th>Description</th>
+		<th>ABV</th>
+		<th>Price</th>
+	</tr>
+	
+	<tbody>
+	    <% @linesfirstcol.each do |line| %>
+	        <tr>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td><%= line.number%></td>
+							</tr>
+							<tr>
+								<td style="font-size: 20px"><%= line.dispense.name %></td>
+							</tr>
+						</td>
+					</table>
+				</tr>
+			</table>	
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td style="color: red"><%= line.currentBeer.brewery.name %></td>
+							</tr>
+							<tr>
+								<td><%= line.currentBeer.name %></td>
+							</tr>
+						</td>
+					</table>
+				</tr>
+			</table>	
+		</td>
+		<td><%= line.currentBeer.style.name %></td>
+		<td><%= number_to_percentage(line.currentBeer.abv, precision: 1) %></td>
+	        <td>
+			<table>
+				<tr>
+					<td><%=line.currentBeer.price_one_description%></td>
+					<td><%= number_to_currency(line.currentBeer.price_one, unit: "&pound") %></td>
+				</tr>
+				<tr>
+					<td><%=line.currentBeer.price_two_description%></td>
+					<td><%= number_to_currency(line.currentBeer.price_two, unit: "&pound") %></td>
+				</tr>
+			</table>
+		</td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+</table>	
+
+<table class="floatedTable">
+	<tr>
+		<th>Line</th>
+		<th>Beer</th>
+		<th>Description</th>
+		<th>ABV</th>
+		<th>Price</th>
+	</tr>
+	
+	<tbody>
+	    <% @linessecondcol.each do |line| %>
+	        <tr>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td><%= line.number%></td>
+							</tr>
+							<tr>
+								<td style="font-size: 20px"><%= line.dispense.name %></td>
+							</tr>
+						</td>
+					</table>
+				</tr>
+			</table>	
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td style="color: red"><%= line.currentBeer.brewery.name %></td>
+							</tr>
+							<tr>
+								<td><%= line.currentBeer.name %></td>
+							</tr>
+						</td>
+					</table>
+				</tr>
+			</table>	
+		</td>
+		<td><%= line.currentBeer.style.name %></td>
+		<td><%= number_to_percentage(line.currentBeer.abv, precision: 1) %></td>
+	        <td>
+			<table>
+				<tr>
+					<td><%=line.currentBeer.price_one_description%></td>
+					<td><%= number_to_currency(line.currentBeer.price_one, unit: "&pound") %></td>
+				</tr>
+				<tr>
+					<td><%=line.currentBeer.price_two_description%></td>
+					<td><%= number_to_currency(line.currentBeer.price_two, unit: "&pound") %></td>
+				</tr>
+			</table>
+		</td>
+	      </tr>
+	    <% end %>
+	
+	  </tbody>
+</table>	
+
+

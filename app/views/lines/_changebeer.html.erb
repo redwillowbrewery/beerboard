@@ -1,0 +1,12 @@
+<%= simple_form_for(@line) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    Current Beer is <%= @line.currentBeer.name %>
+    <%= f.association :beer, collection: Beer.available(@line.dispense_id) %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

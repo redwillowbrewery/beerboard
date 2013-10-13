@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @line.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @line.name %>
+</p>
+
+<p>
+  <strong>Dispense:</strong>
+  <%= @line.dispense.name %>
+</p>
+
+<p>
+  <strong>Beer:</strong>
+  <%= @line.currentBeer.name %>
+</p>
+
+<p>
+	<strong>Pump Clip:</strong>
+	<%= image_tag "#{@line.currentBeer.pumpclip}", height: '55', width: 'auto' %>
+</p>
+<%= link_to 'Edit', edit_line_path(@line) %> |
+<%= link_to 'Back', lines_path %>
