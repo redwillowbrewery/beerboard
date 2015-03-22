@@ -4,13 +4,13 @@ body {
   font-family: Gotham Book;
   font-size: 32px;
   line-height: 32px;
-  .floatedTable {float:left;border:2px solid #fff;width:48%}
-  .paddedTable {float:left;border:2px solid #fff;width:2%}
+  .floatedTable {float:left;border:2px solid #B87333;width:48%}
+  .paddedTable {float:left;border:2px solid #000;width:2%}
 }
 
 	
 td{
- text-align: center;
+ text-align: left;
 }
 
 p, ol, ul td{
