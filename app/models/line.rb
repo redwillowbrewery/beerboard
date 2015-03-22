@@ -18,10 +18,12 @@ class Line < ActiveRecord::Base
   #once a beer as been assigned to a line then decrease the available stock
   #of that beer by one
   def assign_beer_to_line
-    beer = Beer.find(beer_id)
-    previous_stock = beer.stock
-    beer.stock = previous_stock -1
-    beer.save
+    if (beer_id)
+      beer = Beer.find(beer_id)
+      previous_stock = beer.stock
+      beer.stock = previous_stock -1
+      beer.save
+    end
   end
   
   

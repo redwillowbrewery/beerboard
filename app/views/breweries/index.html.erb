@@ -4,8 +4,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Image</th>
-      <th>Website</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,8 +14,6 @@
     <% @breweries.each do |brewery| %>
       <tr>
         <td><%= brewery.name %></td>
-        <td><%= brewery.image %></td>
-        <td><%= brewery.website %></td>
         <td><%= link_to 'Show', brewery %></td>
         <td><%= link_to 'Edit', edit_brewery_path(brewery) %></td>
         <td><%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>

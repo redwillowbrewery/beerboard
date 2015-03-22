@@ -16,7 +16,7 @@
   <tbody>
     <% @beers.each do |beer| %>
       <tr>
-        <td><%= beer.brewery.name %></td>
+        <td><%= link_to beer.brewery.name, edit_beer_path(beer) %></td>
         <td><%= beer.name %></td>
         <td><%= number_to_percentage(beer.abv, precision: 1)%></td>
         <td><%= beer.stock %></td>
@@ -33,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Beer', new_beer_path %>
+<%= link_to 'New Stuff', new_beer_path %>

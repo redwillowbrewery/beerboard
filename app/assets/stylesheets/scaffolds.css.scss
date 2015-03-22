@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: yellow;
   color: white;
   font-family: Gotham Book;
   font-size: 32px;
@@ -10,7 +10,7 @@ body {
 
 	
 td{
- text-align: left;
+ text-align: center;
 }
 
 p, ol, ul td{
@@ -26,12 +26,12 @@ pre {
 }
 
 a {
-  color: white;
+  color: white ;
   &:visited {
-    color: white;
+    color: white ;
   }
   &:hover {
-    color: #fff;
+    color: yellow;
     background-color: #000;
   }
 }

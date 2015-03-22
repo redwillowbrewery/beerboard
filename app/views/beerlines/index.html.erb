@@ -4,11 +4,11 @@
 
 </tr>
 </table>
-<table class="floatedTable">
+<table class="floatedTable" rules="rows">
 	<tr>
 		<th>Line</th>
 		<th>Beer</th>
-		<th>Description</th>
+		<th>Style</th>
 		<th>ABV</th>
 		<th>Price</th>
 	</tr>
@@ -22,10 +22,18 @@
 					<td>
 						<table>
 							<tr>
-								<td><%= line.number%></td>
+								<% if line.dispense_id == 2%>
+									<td id="KegNumber"><%= line.number%></td>
+								<% else %>
+									<td><%= line.number%></td>
+								<% end %>
 							</tr>
 							<tr>
-								<td style="font-size: 20px"><%= line.dispense.name %></td>
+								<% if line.dispense_id == 2%>
+									<td id="KegLine"><%= line.dispense.name%></td>
+								<% else %>
+									<td style="font-size: 20px"><%= line.dispense.name%></td>
+								<% end %>
 							</tr>
 						</td>
 					</table>
@@ -38,7 +46,7 @@
 					<td>
 						<table>
 							<tr>
-								<td style="color: red"><%= line.currentBeer.brewery.name %></td>
+								<td id="brewery"><%= line.currentBeer.brewery.name %></td>
 							</tr>
 							<tr>
 								<td><%= line.currentBeer.name %></td>
@@ -67,11 +75,11 @@
 	  </tbody>
 </table>	
 
-<table class="floatedTable">
+<table class="floatedTable" rules="rows">
 	<tr>
 		<th>Line</th>
 		<th>Beer</th>
-		<th>Description</th>
+		<th>Style</th>
 		<th>ABV</th>
 		<th>Price</th>
 	</tr>
@@ -85,10 +93,18 @@
 					<td>
 						<table>
 							<tr>
-								<td><%= line.number%></td>
+								<% if line.dispense_id == 2%>
+									<td id="KegNumber"><%= line.number%></td>
+								<% else %>
+									<td><%= line.number%></td>
+								<% end %>
 							</tr>
 							<tr>
-								<td style="font-size: 20px"><%= line.dispense.name %></td>
+								<% if line.dispense_id == 2%>
+									<td id="KegLine"><%= line.dispense.name%></td>
+								<% else %>
+									<td style="font-size: 20px"><%= line.dispense.name%></td>
+								<% end %>
 							</tr>
 						</td>
 					</table>
@@ -101,7 +117,7 @@
 					<td>
 						<table>
 							<tr>
-								<td style="color: red"><%= line.currentBeer.brewery.name %></td>
+								<td id="brewery"><%= line.currentBeer.brewery.name %></td>
 							</tr>
 							<tr>
 								<td><%= line.currentBeer.name %></td>
