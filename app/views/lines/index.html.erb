@@ -20,6 +20,7 @@
         <td><%= line.name %></td>
         <td><%= line.currentBeer.name %></td>
         <td><%= link_to 'Beer Change', edit_line_path(line) %></td>
+        <td><%= link_to 'Destroy', line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
