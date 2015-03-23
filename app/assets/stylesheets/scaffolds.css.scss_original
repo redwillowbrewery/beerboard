@@ -1,11 +1,11 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #2D2D2D;
+  color: #CCCCCC;
   font-family: Gotham Book;
   font-size: 32px;
   line-height: 32px;
   .floatedTable {float:left;border:2px solid #B87333;width:48%}
-  .paddedTable {float:left;border:2px solid #000;width:2%}
+  .paddedTable {float:left;border:0px solid #2D2D2D;width:2%}
 }
 
 	
@@ -26,12 +26,12 @@ pre {
 }
 
 a {
-  color: white ;
+  color: white;
   &:visited {
-    color: white ;
+    color: white;
   }
   &:hover {
-    color: yellow;
+    color: #fff;
     background-color: #000;
   }
 }
@@ -46,27 +46,28 @@ div {
   color: green;
 }
 
-#KegLine
-{
-  color: #CD7F32;
-
-}
-
-#KegNumber
-{
-  color: #CD7F32;
-}
-
-#brewery
-{
-  color: #B87333;
-}
-
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
+
+#KegLine
+{
+	color: #CD7F32;
+	font-size: 20px;
+}
+
+#KegNumber
+{
+	color: #CD7F32;
+}
+
+#brewery
+{
+	color: #B87333
+}
+
 
 #error_explanation {
   width: 450px;
